@@ -1,0 +1,75 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: gainsboro;
+
+	margin-top: 100px;
+	padding: 20px;
+
+	& > [data-name=interact] {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+
+		& > button {
+			background: transparent;
+			border: transparent;
+
+			svg {
+				path {
+					transition: 0.3s;
+				}
+			}
+
+			&:hover {
+				&[data-active=github] {
+					svg {
+						path {
+							fill: #2B3137 !important;
+							transition: 0.3s;
+						}
+					}
+				}
+
+				&[data-active=gmail] {
+					svg {
+						path {
+							fill: #EA4335 !important;
+							transition: 0.3s;
+						}
+					}
+				}
+
+				&[data-active=project] {
+					svg {
+						path {
+							fill: dodgerblue !important;
+							transition: 0.3s;
+						}
+					}
+				}
+
+				&[data-active=blog] {
+					svg {
+						path {
+							fill: #61DBFB !important;
+							transition: 0.3s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& > [data-name=info] {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+
+		p {
+			font-size: 12px;
+			color: grey;
+		}
+	}
+}

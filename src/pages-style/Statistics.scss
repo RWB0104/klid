@@ -1,0 +1,52 @@
+section[data-section=statistics] {
+	& > .pannel {
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		& > input[name=week] {
+			padding: 5px;
+
+			width: 150px;
+
+			border: 1px solid #AAA;
+
+			&:focus {
+				outline: 1px solid dodgerblue;
+			}
+		}
+	}
+
+	& > .stat {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		gap: 20px;
+
+		.full-width {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	section[data-section=statistics] {
+		& > .stat {
+			display: grid;
+			grid-template-columns: 1fr;
+
+			gap: 20px;
+
+			& > div {
+				overflow-y: auto;
+				border: 1px solid gainsboro;
+				border-radius: 5px;
+			}
+
+			.full-width {
+				grid-column-start: initial;
+				grid-column-end: initial;
+			}
+		}
+	}
+}

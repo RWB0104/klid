@@ -1,0 +1,65 @@
+header {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 15px;
+
+	background-color: dodgerblue;
+
+	& > .title {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+
+		font-size: 36px;
+
+		color: white;
+
+		img {
+			width: 47px;
+		}
+	}
+
+	& > .menu {
+		display: flex;
+		gap: 40px;
+		align-self: center;
+
+		margin-right: 50px;
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	header {
+		flex-direction: column;
+		gap: 10px;
+
+		& > .title {
+			font-size: 24px;
+			gap: 10px;
+			justify-content: center;
+
+			img {
+				width: 30px;
+			}
+		}
+
+		& > .menu {
+			margin-right: initial;
+
+			a {
+				flex: 1 1 0px;
+				text-align: center;
+
+				span {
+					display: block;
+				}
+			}
+		}
+	}
+}

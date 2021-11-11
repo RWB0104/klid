@@ -1,0 +1,54 @@
+.worklist {
+	overflow: auto;
+
+	table {
+		width: 100%;
+
+		border-collapse: collapse;
+
+		tr[data-type=header] {
+			background-color: gainsboro;
+
+			& > th:first-child {
+				border-top-left-radius: 5px;
+			}
+
+			& > th:last-child {
+				border-top-right-radius: 5px;
+			}
+		}
+
+		tr[data-type=item] {
+			border-bottom: 1px solid gainsboro;
+
+			&[data-view=false]:hover {
+				background-color: dodgerblue;
+				color: white;
+
+				cursor: pointer;
+
+				transition: 0.3s;
+			}
+
+			&[data-view=false]:active {
+				opacity: 0.5;
+			}
+
+			td {
+				&:not([data-name="description"]) {
+					white-space: nowrap;
+				}
+			}
+		}
+
+		th {
+			padding: 10px;
+		}
+
+		td {
+			padding: 10px;
+
+			font-size: 14px;
+		}
+	}
+}

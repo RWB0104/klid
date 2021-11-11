@@ -1,0 +1,97 @@
+.stat-table {
+	width: 100%;
+	border-collapse: collapse;
+	border-style: hidden;
+	box-shadow: 0 0 0 1px gainsboro;
+	border-radius: 5px;
+
+	table-layout: fixed;
+
+	th, td {
+		padding: 5px;
+
+		font-size: 14px;
+		border: 1px solid gainsboro;
+	}
+
+	thead {
+		tr:first-child {
+			th:first-child, td:first-child {
+				border-top-left-radius: 5px;
+			}
+
+			th:last-child, td:last-child {
+				border-top-right-radius: 5px;
+			}
+		}
+
+		th {
+			background-color: whitesmoke;
+		}
+	}
+
+	tbody {
+		tr:nth-child(2n) {
+			th, td {
+				background-color: whitesmoke;
+			}
+		}
+
+		tr:last-child {
+			th:first-child, td:first-child {
+				border-bottom-left-radius: 5px;
+			}
+
+			th:last-child, td:last-child {
+				border-bottom-right-radius: 5px;
+			}
+		}
+
+		tr:hover {
+			th, td {
+				background-color: dodgerblue !important;
+				color: white;
+
+				transition: 0.3s;
+			}
+		}
+	}
+
+	&[data-type=month] {
+		thead {
+			tr:first-child {
+				th, td {
+					background-color: #FAFAD2;
+				}
+			}
+		}
+	}
+
+	&[data-type=total] {
+		thead {
+			tr:first-child {
+				th, td {
+					background-color: #FFE3EE;
+				}
+			}
+		}
+	}
+
+	&[data-type=detail] {
+		thead {
+			tr:first-child {
+				th, td {
+					background-color: #D2D2FF;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.stat-table {
+		th, td {
+			font-size: 12px;
+		}
+	}
+}
