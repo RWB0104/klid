@@ -30,13 +30,13 @@ export default function Meta({ title, description = '도로명주소 업무 시�
 		<Helmet>
 			<meta name="description" content={description} />
 
-			<meta name="og:site_name" content={SITE_NAME} />
-			<meta name="og:title" content={fullTitle} />
-			<meta name="og:description" content={description} />
-			<meta name="og:type" content="website" />
-			<meta name="og:url" content={`${URL}${url}`} />
-			<meta name="og:locale" content="ko_KR" />
-			<meta name="og:image" content={image} />
+			<meta property="og:site_name" content={SITE_NAME} />
+			<meta property="og:title" content={fullTitle} />
+			<meta property="og:description" content={description} />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content={`${URL}${url}`} />
+			<meta property="og:locale" content="ko_KR" />
+			<meta property="og:image" content={image} />
 
 			<title>{fullTitle}</title>
 		</Helmet>
