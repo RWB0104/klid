@@ -46,7 +46,7 @@ export default function List(): ReactElement
 
 	return (
 		<Section url="list" width={1600}>
-			<Meta title="📋 List" url="/list" image={`${URL}/logo512.png`} />
+			<Meta title="📋 List" url="/list" image={`${URL}/logo.png`} />
 
 			<div className="pannel">
 				<button className="icon-button add" onClick={() => setItemViewerState({ flag: true, isAdd: true, item: defaultItemViewerState })}>

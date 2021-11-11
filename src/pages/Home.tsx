@@ -20,7 +20,7 @@ export default function Home(): ReactElement
 {
 	return (
 		<Section url="home">
-			<Meta title="🏠 Home" url="/" image={`${URL}/logo512.png`} />
+			<Meta title="🏠 Home" url="/" image={`${URL}/logo.png`} />
 			Home
 		</Section>
 	);
