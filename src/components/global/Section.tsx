@@ -10,7 +10,7 @@ import './Section.scss';
 
 interface Props {
 	url?: string,
-	width?: number
+	width?: number | string
 	children: any
 }
 

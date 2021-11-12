@@ -19,7 +19,9 @@ button.icon-button {
 
 main {
 	& > section {
-		min-height: calc(100vh - 341px);
+		min-height: calc(100vh - 325px);
+
+		padding-bottom: 115px;
 	}
 }
 

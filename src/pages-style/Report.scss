@@ -1,0 +1,13 @@
+section[data-section=report] {
+	background-color: gainsboro;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 1200px) {
+	section[data-section=report] {
+
+	}
+}
