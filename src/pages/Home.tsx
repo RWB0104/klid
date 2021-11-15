@@ -279,7 +279,7 @@ export default function Home(): ReactElement
 						</div>
 
 						<div className="body" data-article="work">
-							<Check item={monthState && monthState[3].value > 0} />
+							<Check isChecked={monthState && monthState[3].value > 0} />
 						</div>
 					</div>
 				</article>
@@ -411,7 +411,7 @@ function Check({ isChecked = false }: CheckProps):ReactElement
 		return (
 			<div>
 				<Icon path={mdiCheckCircleOutline} size={5} color="limegreen" />
-				<p><b data-status="good">D - {calc}</b></p>
+				<p><b data-status="good">DONE</b></p>
 			</div>
 		);
 	}
@@ -420,7 +420,7 @@ function Check({ isChecked = false }: CheckProps):ReactElement
 	else
 	{
 		const ref = 25;
-		const day = getDateDetail().day;
+		const day = parseInt(getDateDetail().day);
 
 		// 25일이 지났을 경우
 		if (day > ref)
