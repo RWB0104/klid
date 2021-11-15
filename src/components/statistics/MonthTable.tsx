@@ -17,7 +17,7 @@ interface Props {
 /**
  * 월 통계 테이블 컴포넌트 ReactElement 반환 메서드
  *
- * @param {Props} 프로퍼티
+ * @param {Props} props: 프로퍼티
  *
  * @returns {ReactElement} 컴포넌트 ReactElement
  */

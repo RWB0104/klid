@@ -1,4 +1,7 @@
+@import './global/apple.scss';
+
 * {
+	font-family: 'AppleSDGothicNeo', sans-serif;
 	user-select: none;
 }
 
@@ -19,16 +22,16 @@ button.icon-button {
 
 main {
 	& > section {
-		min-height: calc(100vh - 325px);
+		min-height: calc(100vh - 328px);
 
 		padding-bottom: 115px;
 	}
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
 	main {
 		& > section {
-			min-height: calc(100vh - 379px);
+			min-height: calc(100vh - 381px);
 		}
 	}
 }

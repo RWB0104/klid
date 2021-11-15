@@ -18,7 +18,7 @@ interface Props extends WorkItemProps {
 /**
  * 업무 아이템 컴포넌트 ReactElement 반환 메서드
  *
- * @param {WorkItemProps} 업무 아이템
+ * @param {Props} 프로퍼티
  *
  * @returns {ReactElement} 컴포넌트 ReactElement
  */

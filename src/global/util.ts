@@ -40,3 +40,29 @@ export function week2date(year: number, week: number, dayFlag: number): Date
 
 	return new Date(mon1 + ((week - 1)  * 7  + dayFlag) * 86400000);
 }
+
+/**
+ * 날짜 -> 주 번호 객체 변환 메서드
+ *
+ * @param {Date} date: 날짜 객체
+ *
+ * @returns {number} 주 번호
+ */
+export function date2week(date: Date): number
+{
+	const tdt = new Date(date.valueOf());
+	const dayn = (date.getDay() + 6) % 7;
+
+	tdt.setDate(tdt.getDate() - dayn + 3);
+
+	const firstThursday = tdt.valueOf();
+
+	tdt.setMonth(0, 1);
+
+	if (tdt.getDay() !== 4)
+	{
+		tdt.setMonth(0, 1 + ((4 - tdt.getDay()) + 7) % 7);
+	}
+
+	return 1 + Math.ceil((firstThursday - tdt.getTime()) / 604800000);
+}

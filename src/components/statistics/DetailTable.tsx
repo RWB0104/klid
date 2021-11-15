@@ -1,3 +1,10 @@
+/**
+ * 세부 통계 테이블 컴포넌트
+ *
+ * @author RWB
+ * @since 2021.11.14 Mon 18:19:44
+ */
+
 import { ReactElement } from 'react';
 import { getDateDetail } from '../../global/util';
 import { StatProps } from '../../global/props';
@@ -8,6 +15,13 @@ interface Props {
 	stat?: StatProps
 }
 
+/**
+ * 세부 통계 테이블 ReactElement 반환 메서드
+ *
+ * @param {Props} props: 프로퍼티
+ *
+ * @returns {ReactElement} 컴포넌트 ReactElement
+ */
 export default function DetailTable({ title, stat }: Props): ReactElement
 {
 	const startDate = getDateDetail(stat?.meta.start_date);

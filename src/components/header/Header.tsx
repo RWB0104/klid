@@ -7,6 +7,8 @@
 
 import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
+import { reportAtom } from '../../global/state';
 import './Header.scss';
 
 /**
@@ -16,6 +18,8 @@ import './Header.scss';
  */
 export default function Header(): ReactElement
 {
+	const setReportState = useSetRecoilState(reportAtom);
+
 	return (
 		<header>
 			<div className="title">
@@ -24,10 +28,10 @@ export default function Header(): ReactElement
 			</div>
 
 			<div className="menu">
-				<Link to="/" data-path="home"><span>🏠</span> <span>Home</span></Link>
-				<Link to="/list" data-path="list"><span>📋</span> <span>List</span></Link>
-				<Link to="/statistics" data-path="statistics"><span>📊</span> <span>Statistics</span></Link>
-				<Link to="/report" data-path="report"><span>📝</span> <span>Report</span></Link>
+				<Link to="/" data-path="home" onClick={() => setReportState({ flag: false, list: new Array([]) })}><span>🏠</span> <span>Home</span></Link>
+				<Link to="/list" data-path="list" onClick={() => setReportState({ flag: false, list: new Array([]) })}><span>📋</span> <span>List</span></Link>
+				<Link to="/statistics" data-path="statistics" onClick={() => setReportState({ flag: false, list: new Array([]) })}><span>📊</span> <span>Statistics</span></Link>
+				<Link to="/report" data-path="report" onClick={() => setReportState({ flag: false, list: new Array([]) })}><span>📝</span> <span>Report</span></Link>
 			</div>
 		</header>
 	);

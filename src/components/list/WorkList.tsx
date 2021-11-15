@@ -18,6 +18,8 @@ interface Props {
 /**
  * 업무 리스트 ReactElement 반환 메서드
  *
+ * @param {Props} 프로퍼티
+ *
  * @returns {ReactElement} 컴포넌트 ReactElement
  */
 export default function WorkList({ list, onlyView = false }: Props): ReactElement

@@ -6,8 +6,46 @@ section[data-section=report] {
 	align-items: center;
 }
 
-@media (max-width: 1200px) {
-	section[data-section=report] {
+@page {
+	size: A4;
+	margin: 0;
+}
 
+@media print {
+	main {
+		padding: 0px;
+		padding: 0px;
+		margin: 0px;
+
+		& > header {
+			display: none !important;
+		}
+
+		& > section {
+			margin: 0px;
+			padding: 0px !important;
+
+			#report-list {
+				padding: 0px;
+				margin: 0px;
+				gap: 0px;
+
+				.report-item {
+					padding: 0px;
+					margin: 0px;
+					border: initial;
+					border-radius: initial;
+					width: initial;
+					min-height: initial;
+					box-shadow: initial;
+					background: initial;
+					page-break-after: always;
+				}
+			}
+		}
+
+		& > footer {
+			display: none !important;
+		}
 	}
 }

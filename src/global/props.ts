@@ -1,3 +1,9 @@
+export interface TotalChartProps {
+	id: string,
+	label: string,
+	value: number,
+}
+
 export interface WorkItemProps {
 	seq: number,
 	type: string,

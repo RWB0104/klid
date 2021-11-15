@@ -16,6 +16,11 @@ export const defaultItemViewerState = {
 	end: new Date().getTime()
 };
 
+export interface ReportState {
+	flag: boolean,
+	list: string[][]
+}
+
 export const itemViewerAtom = atom({
 	key: 'itemViewerState',
 	default: {
@@ -28,4 +33,12 @@ export const itemViewerAtom = atom({
 export const itemViewerModeAtom = atom({
 	key: 'itemViewerModeState',
 	default: false
+});
+
+export const reportAtom = atom({
+	key: 'reportState',
+	default: {
+		flag: false,
+		list: new Array([]) as string[][]
+	}
 });

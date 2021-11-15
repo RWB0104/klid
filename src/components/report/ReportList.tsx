@@ -1,20 +1,30 @@
 /**
- * 드로퍼 컴포넌트
+ * 보고서 리스트 컴포넌트
  *
  * @author RWB
- * @since 2021.11.12 Fri 11:49:40
+ * @since 2021.11.15 Mon 23:03:16
  */
 
-import { mdiFileDocument } from '@mdi/js';
-import Icon from '@mdi/react';
 import { ReactElement } from 'react';
+import ReportItem from './ReportItem';
+import './ReportList.scss';
 
-export default function Dropper(): ReactElement
+interface Props {
+	list?: string[][]
+}
+
+/**
+ * 보고서 리스트 ReactElement 반환 메서드
+ *
+ * @param {Props} 프로퍼티
+ *
+ * @returns {ReactElement} 컴포넌트 ReactElement
+ */
+export default function ReportList({ list }: Props): ReactElement
 {
 	return (
-		<div>
-			<Icon path={mdiFileDocument} size={3} color="grey" />
-			asdfasdfasf
+		<div id="report-list">
+			{list?.map((e, index) => <ReportItem key={index} item={e} />)}
 		</div>
 	);
 }

@@ -8,10 +8,24 @@
 import { mdiDownload, mdiFileDocument, mdiFileSearch } from '@mdi/js';
 import Icon from '@mdi/react';
 import { ReactElement } from 'react';
+import { SetterOrUpdater, useSetRecoilState } from 'recoil';
+import { reportAtom } from '../../global/state';
 import './Dropper.scss';
 
+interface ReportProps {
+	flag: boolean,
+	list: string[][]
+}
+
+/**
+ * 드로퍼 ReactElement 반환 메서드
+ *
+ * @returns {ReactElement} 컴포넌트 ReactElement
+ */
 export default function Dropper(): ReactElement
 {
+	const setReportState = useSetRecoilState(reportAtom);
+
 	return (
 		<div id="dropper"
 			onDrop={(e) =>
@@ -20,9 +34,10 @@ export default function Dropper(): ReactElement
 
 				const data = e.dataTransfer.files[0];
 
+				// data가 유효한 객체를 가질 경우
 				if (data)
 				{
-					csv2arr(data);
+					csv2arr(data, setReportState);
 				}
 			}}
 
@@ -31,7 +46,9 @@ export default function Dropper(): ReactElement
 				e.preventDefault();
 			}}
 		>
-			<Icon path={mdiFileDocument} size={3} />
+			<p>
+				<Icon path={mdiFileDocument} size={3} />
+			</p>
 
 			<p>CSV 양식을 Drag &amp; Drop 하거나, 아래의 버튼을 클릭해서 파일을 선택하세요.</p>
 
@@ -39,13 +56,15 @@ export default function Dropper(): ReactElement
 			{
 				e.preventDefault();
 
-				if (e.target !== null)
+				// e.target이 유효한 객체를 가질 경우
+				if (e.target)
 				{
 					const file = e.target.files;
 
+					// file이 유효한 객체를 가질 경우
 					if (file)
 					{
-						csv2arr(file[0]);
+						csv2arr(file[0], setReportState);
 					}
 				}
 			}} />
@@ -77,7 +96,13 @@ export default function Dropper(): ReactElement
 	);
 }
 
-function csv2arr(file: File)
+/**
+ * CSV to 배열 변환 및 반환 메서드
+ *
+ * @param {File} file: 파일 객체
+ * @param {ReportProps}
+ */
+function csv2arr(file: File, setter: SetterOrUpdater<ReportProps>)
 {
 	if (file)
 	{
@@ -91,12 +116,22 @@ function csv2arr(file: File)
 			reader.readAsText(file, 'EUC-KR');
 			reader.onload = (e) =>
 			{
+				// e.target이 유효한 객체를 가질 경우
 				if (e.target)
 				{
 					const text = e.target.result as string;
-					const arr = text.split('\r\n').map(e => e.split(','));
+					const arr = text.split('\r\n').map(e => e.split(',')).slice(1);
 
-					console.dir(arr);
+					setter({
+						flag: true,
+						list: arr
+					});
+				}
+
+				// 아닐 경우
+				else
+				{
+
 				}
 			};
 		}
@@ -104,7 +139,7 @@ function csv2arr(file: File)
 		// 아닐 경우
 		else
 		{
-
+			alert('지원하지 않는 확장자');
 		}
 	}
 }

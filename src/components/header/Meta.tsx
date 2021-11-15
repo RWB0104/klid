@@ -20,6 +20,8 @@ interface Props {
 /**
  * 메타 컴포넌트 ReactElement 반환 메서드
  *
+ * @param {Props} props: 프로퍼티
+ *
  * @returns {ReactElement} 컴포넌트 ReactElement
  */
 export default function Meta({ title, description = '도로명주소 업무 시스템', url, image }: Props): ReactElement
