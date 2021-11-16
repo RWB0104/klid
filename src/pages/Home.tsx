@@ -9,6 +9,8 @@ import React, { ReactElement, useEffect, useState } from 'react';
 import { CalendarDatum } from '@nivo/calendar';
 import Section from '../components/global/Section';
 import Meta from '../components/header/Meta';
+import WorkCount from '../components/home/WorkCount';
+import CheckCount from '../components/home/CheckCount';
 import PieChart from '../components/home/PieChart';
 import CalendarChart from '../components/home/CalendarChart';
 import { URL } from '../global/variable';
@@ -17,16 +19,6 @@ import { getStatistics } from '../api/StatisticsAPI';
 import { date2week, getDateDetail } from '../global/util';
 import { TotalChartProps } from '../global/props';
 import { getList } from '../api/ListAPI';
-import Icon from '@mdi/react';
-import { mdiAlertCircleOutline, mdiCheckCircleOutline, mdiHelpCircleOutline, mdiInformationOutline } from '@mdi/js';
-
-interface Props {
-	item?: CalendarDatum
-}
-
-interface CheckProps {
-	isChecked?: boolean
-}
 
 /**
  * 홈 페이지 ReactElement 반환 메서드
@@ -167,35 +159,40 @@ export default function Home(): ReactElement
 			list: [
 				'착수계',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '02',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '03',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '04',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '05',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
@@ -203,7 +200,8 @@ export default function Home(): ReactElement
 			list: [
 				'상반기 중점점검',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
@@ -211,7 +209,8 @@ export default function Home(): ReactElement
 			list: [
 				'GIS 엔진교육 시즌',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
@@ -219,21 +218,24 @@ export default function Home(): ReactElement
 			list: [
 				'GIS 엔진교육 시즌',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '09',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
 			month: '10',
 			list: [
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
@@ -241,7 +243,8 @@ export default function Home(): ReactElement
 			list: [
 				'하반기 중점점검 (11 ~ 12월)',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		},
 		{
@@ -250,7 +253,8 @@ export default function Home(): ReactElement
 				'준공',
 				'하반기 중점점검 (11 ~ 12월)',
 				'중앙서버 정기점검 (20 ~ 25일)',
-				'지자체 월간점검 (월말)'
+				'지자체 월간점검 (월말)',
+				'전월 기성금 서류 작성'
 			]
 		}
 	];
@@ -267,7 +271,7 @@ export default function Home(): ReactElement
 						</div>
 
 						<div className="body" data-article="work">
-							<Between item={listState && listState[listState?.length - 1]} />
+							<WorkCount item={listState && listState[listState?.length - 1]} />
 						</div>
 					</div>
 				</article>
@@ -279,7 +283,7 @@ export default function Home(): ReactElement
 						</div>
 
 						<div className="body" data-article="work">
-							<Check isChecked={monthState && monthState[3].value > 0} />
+							<CheckCount isChecked={monthState && monthState[3].value > 0} />
 						</div>
 					</div>
 				</article>
@@ -340,108 +344,4 @@ export default function Home(): ReactElement
 			</div>
 		</Section>
 	);
-}
-
-/**
- * 업무 경과 ReactElement 반환 메서드
- *
- * @param {Props} props: 프로퍼티
- *
- * @returns {ReactElement} 컴포넌트 ReactElement
- */
-function Between({ item }: Props): ReactElement
-{
-	// item이 유효한 객체를 가질 경우
-	if (item)
-	{
-		const date = getDateDetail();
-		const calc = Math.ceil((new Date(`${date.year}-${date.month}-${date.day}`).getTime() - new Date(item.day).getTime()) / 86400000);
-
-		// 일주일 이하일 경우
-		if (calc < 8)
-		{
-			return (
-				<div>
-					<Icon path={mdiCheckCircleOutline} size={5} color="limegreen" />
-					<p><b data-status="good">D - {calc}</b></p>
-				</div>
-			);
-		}
-
-		// 2주 이하일 경우
-		else if (calc < 15)
-		{
-			return (
-				<div>
-					<Icon path={mdiInformationOutline} size={5} color="orange" />
-					<p><b data-status="warn">D - {calc}</b></p>
-				</div>
-			);
-		}
-
-		// 2주를 넘길 경우
-		else
-		{
-			return (
-				<div>
-					<Icon path={mdiAlertCircleOutline} size={5} color="orangered" />
-					<p><b data-status="bad">D - {calc}</b></p>
-				</div>
-			);
-		}
-	}
-
-	// 아닐 경우
-	else
-	{
-		return (
-			<div>
-				<Icon path={mdiHelpCircleOutline} size={5} color="#FF9999" />
-				<p><b data-status="error">D - ???</b></p>
-			</div>
-		);
-	}
-}
-
-function Check({ isChecked = false }: CheckProps):ReactElement
-{
-	// 정기점검을 완료할 경우
-	if (isChecked)
-	{
-		return (
-			<div>
-				<Icon path={mdiCheckCircleOutline} size={5} color="limegreen" />
-				<p><b data-status="good">DONE</b></p>
-			</div>
-		);
-	}
-
-	// 정기점검을 완료하지 않았을 경우
-	else
-	{
-		const ref = 25;
-		const day = parseInt(getDateDetail().day);
-
-		// 25일이 지났을 경우
-		if (day > ref)
-		{
-			return (
-				<div>
-					<Icon path={mdiAlertCircleOutline} size={5} color="orangered" />
-					<p><b data-status="bad">D + {day - ref}</b></p>
-				</div>
-			);
-		}
-
-		// 25일이 지나지 않았을 경우
-		else
-		{
-			return (
-				<div>
-					<Icon path={mdiCheckCircleOutline} size={5} color="limegreen" />
-					<p><b data-status="good">D - {ref - day}</b></p>
-				</div>
-			);
-		}
-	}
 }
