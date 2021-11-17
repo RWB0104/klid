@@ -18,6 +18,7 @@ import './Footer.scss';
 export default function Footer(): ReactElement
 {
 	const size = 1.2;
+
 	return (
 		<footer>
 			<div data-name="interact">

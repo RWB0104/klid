@@ -78,7 +78,7 @@ export default function ItemViewer({ isAdd, item }: Props): ReactElement
 									// 생성 결과가 비정상일 경우
 									else
 									{
-										alert('asfaf');
+										alert('생성 실패');
 									}
 
 									break;
@@ -95,7 +95,7 @@ export default function ItemViewer({ isAdd, item }: Props): ReactElement
 									// 갱신 결과가 비정상일 경우
 									else
 									{
-										alert('asfaf');
+										alert('갱신 실패');
 									}
 
 									break;
@@ -112,7 +112,7 @@ export default function ItemViewer({ isAdd, item }: Props): ReactElement
 									// 삭제 결과가 비정상일 경우
 									else
 									{
-										alert('asfaf');
+										alert('삭제 실패');
 									}
 
 									break;

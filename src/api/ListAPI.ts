@@ -6,8 +6,9 @@
  */
 
 import { WorkItemProps } from '../global/props';
+import { API_BASE } from '../global/variable';
 
-const API_URL = 'https://api.itcode.dev/klid/api/list';
+const API_URL = `${API_BASE}/list`;
 
 /**
  * 리스트 반환 API 메서드
@@ -79,7 +80,13 @@ export async function postList(item: WorkItemProps): Promise<boolean>
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify(item)
+		body: JSON.stringify({
+			type: item.type,
+			worker: item.worker,
+			description: item.description,
+			start: item.start,
+			end: item.end
+		})
 	});
 
 	const { ok } = response;
@@ -94,7 +101,13 @@ export async function putList(item: WorkItemProps): Promise<string>
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify(item)
+		body: JSON.stringify({
+			type: item.type,
+			worker: item.worker,
+			description: item.description,
+			start: item.start,
+			end: item.end
+		})
 	});
 
 	const { ok } = response;

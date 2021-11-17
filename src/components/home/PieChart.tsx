@@ -43,8 +43,6 @@ export default function PieChart({ list }: Props): ReactElement
 			/>
 		</div>
 	) : (
-		<div className="chart-error">
-			<ChartError />
-		</div>
+		<ChartError />
 	);
 }
