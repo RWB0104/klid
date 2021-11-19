@@ -28,7 +28,10 @@
 		"build:windows": "react-scripts build && ./windows.bat",
 		"build:linux": "react-scripts build && mv build docs",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"dist": "yarn build && react-snap",
+		"dist:windows": "yarn build && react-snap && ./windows.bat",
+		"dist:linux": "yarn build && react-snap && mv build docs"
 	},
 	"browserslist": {
 		"production": [
@@ -49,7 +52,8 @@
 		"@types/react-router-dom": "^5.3.2",
 		"@typescript-eslint/eslint-plugin": "^4.28.2",
 		"@typescript-eslint/parser": "^4.28.2",
-		"node-sass": "5.0.0",
-		"recoil": "^0.4.1"
+		"react-snap": "^1.23.0",
+		"recoil": "^0.4.1",
+		"sass": "^1.43.4"
 	}
 }

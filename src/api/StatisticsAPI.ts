@@ -6,8 +6,9 @@
  */
 
 import { StatProps } from '../global/props';
+import { API_BASE } from '../global/variable';
 
-const API_URL = 'https://api.itcode.dev/klid/api/statistics';
+const API_URL = `${API_BASE}/statistics`;
 
 /**
  * 통계 반환 API 메서드

@@ -6,16 +6,10 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './global/reportWebVitals';
+import { hydrate, render } from 'react-dom';
 import './index.scss';
+import App from './App';
 
-ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementsByTagName('main')[0]
-);
+const root = document.querySelector('main');
 
-reportWebVitals();
+root?.hasChildNodes() ? hydrate(<App />, root) : render(<App />, root);

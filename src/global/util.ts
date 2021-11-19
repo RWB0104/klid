@@ -1,3 +1,10 @@
+/**
+ * 유틸 모듈
+ *
+ * @author RWB
+ * @since 2021.11.17 Wed 22:45:53
+ */
+
 import { DateProps } from './props';
 
 /**

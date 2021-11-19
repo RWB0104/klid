@@ -6,7 +6,7 @@
  */
 
 import React, { ReactElement } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './pages/Home';
@@ -26,7 +26,7 @@ export default function App(): ReactElement
 	return (
 		<RecoilRoot>
 			<HelmetProvider>
-				<HashRouter>
+				<BrowserRouter basename="klid">
 					<Header />
 
 					<Switch>
@@ -38,7 +38,7 @@ export default function App(): ReactElement
 					</Switch>
 
 					<Footer />
-				</HashRouter>
+				</BrowserRouter>
 			</HelmetProvider>
 		</RecoilRoot>
 	);
