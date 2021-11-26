@@ -30,7 +30,7 @@ export default function Footer(): ReactElement
 					<Icon path={mdiGmail} color="grey" size={size} />
 				</button>
 
-				<button className="icon-button" title="project" data-active="project" onClick={() => open('https://project.itcode.dev')}>
+				<button className="icon-button" title="project" data-active="project" onClick={() => open('https://itcode.dev')}>
 					<Icon path={mdiWeb} color="grey" size={size} />
 				</button>
 
@@ -40,7 +40,7 @@ export default function Footer(): ReactElement
 			</div>
 
 			<div data-name="info">
-				<p>💻 Copyright ⓒ RWB 2021.11</p>
+				<p>💻 Copyright ⓒ RWB 2021. 11.</p>
 			</div>
 		</footer>
 	);
