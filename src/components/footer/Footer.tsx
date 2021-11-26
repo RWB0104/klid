@@ -22,7 +22,7 @@ export default function Footer(): ReactElement
 	return (
 		<footer>
 			<div data-name="interact">
-				<button className="icon-button" title="github" data-active="github" onClick={() => open('https://github.com/RWB0104')}>
+				<button className="icon-button" title="github" data-active="github" onClick={() => open('https://github.com/RWB0104/klid')}>
 					<Icon path={mdiGithub} color="grey" size={size} />
 				</button>
 

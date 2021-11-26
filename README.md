@@ -127,7 +127,11 @@
 
 ## 빌드 방법
 
-준비 중
+`yarn dist` 명령어를 통해 React를 정적 빌드할 수 있다.
+
+`build` 폴더에 결과물이 생성된다.
+
+[도로명주소 업무 시스템 - Frontend Wiki: 프로젝트 빌드](https://github.com/RWB0104/klid/wiki/Build)에서 자세한 내용을 확인할 수 있다.
 
 <br />
 <br />
@@ -159,4 +163,5 @@
 
 # 📄 관련 문서
 
-* 준비 중
+* [도로명주소 업무 시스템 - Backend](https://github.com/RWB0104/api.itcode.dev-klid)
+* [도로명주소 업무 시스템 - Frontend Wiki](https://github.com/RWB0104/klid/wiki)
