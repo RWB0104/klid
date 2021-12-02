@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/klid/static/css/main.f5fcb0ad.chunk.css",
+    "main.js": "/klid/static/js/main.1f657169.chunk.js",
+    "main.js.map": "/klid/static/js/main.1f657169.chunk.js.map",
+    "runtime-main.js": "/klid/static/js/runtime-main.c50911ec.js",
+    "runtime-main.js.map": "/klid/static/js/runtime-main.c50911ec.js.map",
+    "static/js/2.472e7fb9.chunk.js": "/klid/static/js/2.472e7fb9.chunk.js",
+    "static/js/2.472e7fb9.chunk.js.map": "/klid/static/js/2.472e7fb9.chunk.js.map",
+    "index.html": "/klid/index.html",
+    "static/css/main.f5fcb0ad.chunk.css.map": "/klid/static/css/main.f5fcb0ad.chunk.css.map",
+    "static/js/2.472e7fb9.chunk.js.LICENSE.txt": "/klid/static/js/2.472e7fb9.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/klid/static/media/AppleSDGothicNeoUL.5993a150.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c50911ec.js",
+    "static/js/2.472e7fb9.chunk.js",
+    "static/css/main.f5fcb0ad.chunk.css",
+    "static/js/main.1f657169.chunk.js"
+  ]
+}
