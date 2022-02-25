@@ -13,7 +13,6 @@ import WorkCount from '../components/home/WorkCount';
 import CheckCount from '../components/home/CheckCount';
 import PieChart from '../components/home/PieChart';
 import CalendarChart from '../components/home/CalendarChart';
-import { URL } from '../global/variable';
 import '../pages-style/Home.scss';
 import { getStatistics } from '../api/StatisticsAPI';
 import { date2week, getDateDetail } from '../global/util';
@@ -261,7 +260,7 @@ export default function Home(): ReactElement
 
 	return (
 		<Section url="home">
-			<Meta title="🏠 Home" url="/" image={`${URL}/logo.png`} />
+			<Meta title="🏠 Home" url="/" />
 
 			<div>
 				<article>

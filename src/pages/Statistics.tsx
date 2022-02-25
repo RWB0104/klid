@@ -12,7 +12,6 @@ import Meta from '../components/header/Meta';
 import MonthTable from '../components/statistics/MonthTable';
 import TotalTable from '../components/statistics/TotalTable';
 import DetailTable from '../components/statistics/DetailTable';
-import { URL } from '../global/variable';
 import { WorkItemProps, StatProps } from '../global/props';
 import '../pages-style/Statistics.scss';
 import WorkList from '../components/list/WorkList';
@@ -34,7 +33,7 @@ export default function Statistics(): ReactElement
 
 	return (
 		<Section url="statistics" width={1200}>
-			<Meta title="📊 Statistics" url="/statistics" image={`${URL}/logo.png`} />
+			<Meta title="📊 Statistics" url="/statistics" />
 
 			<div className="pannel">
 				<input type="week" name="week" aria-label="week" onChange={(e) =>

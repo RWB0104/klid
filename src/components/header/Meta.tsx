@@ -13,8 +13,7 @@ import './Header.scss';
 interface Props {
 	title: string,
 	description?: string,
-	url: string,
-	image: string
+	url: string
 }
 
 /**
@@ -24,7 +23,7 @@ interface Props {
  *
  * @returns {ReactElement} 컴포넌트 ReactElement
  */
-export default function Meta({ title, description = '도로명주소 업무 시스템', url, image }: Props): ReactElement
+export default function Meta({ title, description = '도로명주소 업무 시스템', url }: Props): ReactElement
 {
 	const fullTitle = `${title} - ${SITE_NAME}`;
 
@@ -38,9 +37,11 @@ export default function Meta({ title, description = '도로명주소 업무 시�
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content={`${URL}${url}`} />
 			<meta property="og:locale" content="ko_KR" />
-			<meta property="og:image" content={image} />
+			<meta property="og:image" content="https://user-images.githubusercontent.com/50317129/155682455-98d30d63-d608-4190-a6f1-2d89868c62ba.png" />
 
 			<title>{fullTitle}</title>
+
+			<script src={'/klid/js/ga.js'}></script>
 		</Helmet>
 	);
 }

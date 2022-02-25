@@ -19,7 +19,6 @@ import { defaultItemViewerState, itemViewerAtom } from '../global/state';
 
 import '../pages-style/List.scss';
 import Meta from '../components/header/Meta';
-import { URL } from '../global/variable';
 
 /**
  * 리스트 페이지 컴포넌트 ReactElement 반환 메서드
@@ -46,7 +45,7 @@ export default function List(): ReactElement
 
 	return (
 		<Section url="list" width={1600}>
-			<Meta title="📋 List" url="/list" image={`${URL}/logo.png`} />
+			<Meta title="📋 List" url="/list" />
 
 			<div className="pannel">
 				<button className="icon-button add" onClick={() => setItemViewerState({ flag: true, isAdd: true, item: defaultItemViewerState })}>
