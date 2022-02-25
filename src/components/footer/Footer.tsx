@@ -43,7 +43,7 @@ export default function Footer(): ReactElement
 			<div data-name="info">
 				<p>💻 Copyright ⓒ RWB 2021. 11.</p>
 
-				<img src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${URL}&count_bg=%23AAA&title_bg=%23AAA&icon=react.svg&icon_color=%23FFF&title=hits&edge_flat=false`} />
+				<img src={`https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=${encodeURIComponent(URL)}&count_bg=%23AAA&title_bg=%23AAA&icon=react.svg&icon_color=%23FFF&title=hits&edge_flat=false`} />
 			</div>
 		</footer>
 	);
