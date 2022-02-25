@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/klid/static/css/main.3bf238c0.chunk.css",
-    "main.js": "/klid/static/js/main.be8d9632.chunk.js",
-    "main.js.map": "/klid/static/js/main.be8d9632.chunk.js.map",
+    "main.js": "/klid/static/js/main.a589ba45.chunk.js",
+    "main.js.map": "/klid/static/js/main.a589ba45.chunk.js.map",
     "runtime-main.js": "/klid/static/js/runtime-main.c50911ec.js",
     "runtime-main.js.map": "/klid/static/js/runtime-main.c50911ec.js.map",
     "static/js/2.e33a4259.chunk.js": "/klid/static/js/2.e33a4259.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.c50911ec.js",
     "static/js/2.e33a4259.chunk.js",
     "static/css/main.3bf238c0.chunk.css",
-    "static/js/main.be8d9632.chunk.js"
+    "static/js/main.a589ba45.chunk.js"
   ]
 }

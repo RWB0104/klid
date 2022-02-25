@@ -41,6 +41,7 @@ export default function Meta({ title, description = '도로명주소 업무 시�
 
 			<title>{fullTitle}</title>
 
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YPNLPR0CQ"></script>
 			<script src={'/klid/js/ga.js'}></script>
 		</Helmet>
 	);
