@@ -25,9 +25,9 @@ export default function CalendarChart({ list }: Props): ReactElement
 {
 	const date = getDateDetail();
 
-	return list ? (
+	return (
 		<div className="body">
-			<ResponsiveCalendar
+			{list ? <ResponsiveCalendar
 				data={list}
 				from={`${date.year}-01-01`}
 				to={`${date.year}-12-31`}
@@ -38,11 +38,7 @@ export default function CalendarChart({ list }: Props): ReactElement
 				monthBorderColor="#ffffff"
 				dayBorderWidth={2}
 				dayBorderColor="#ffffff"
-			/>
-		</div>
-	) : (
-		<div className="chart-error">
-			<ChartError />
+			/> : <ChartError />}
 		</div>
 	);
 }

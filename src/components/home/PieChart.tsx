@@ -23,9 +23,9 @@ interface Props {
  */
 export default function PieChart({ list }: Props): ReactElement
 {
-	return list ? (
+	return (
 		<div className="body">
-			<ResponsivePie
+			{list ? <ResponsivePie
 				data={list}
 				margin={{ top: 20, right: 80, bottom: 20, left: 80 }}
 				innerRadius={0.5}
@@ -40,11 +40,7 @@ export default function PieChart({ list }: Props): ReactElement
 				arcLinkLabelsColor={{ from: 'color' }}
 				arcLabelsSkipAngle={10}
 				arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-			/>
-		</div>
-	) : (
-		<div className="chart-error">
-			<ChartError />
+			/> : <ChartError />}
 		</div>
 	);
 }

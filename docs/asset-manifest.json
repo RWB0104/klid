@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/klid/static/css/main.3b5a27fa.chunk.css",
-    "main.js": "/klid/static/js/main.c993d63c.chunk.js",
+    "main.css": "/klid/static/css/main.191c1490.chunk.css",
+    "main.js": "/klid/static/js/main.7ddfb3c5.chunk.js",
     "runtime-main.js": "/klid/static/js/runtime-main.c50911ec.js",
     "static/js/2.e33a4259.chunk.js": "/klid/static/js/2.e33a4259.chunk.js",
     "index.html": "/klid/index.html",
@@ -10,7 +10,7 @@
   "entrypoints": [
     "static/js/runtime-main.c50911ec.js",
     "static/js/2.e33a4259.chunk.js",
-    "static/css/main.3b5a27fa.chunk.css",
-    "static/js/main.c993d63c.chunk.js"
+    "static/css/main.191c1490.chunk.css",
+    "static/js/main.7ddfb3c5.chunk.js"
   ]
 }
