@@ -45,7 +45,7 @@ export default function List(): ReactElement
 
 	return (
 		<Section url="list" width={1600}>
-			<Meta title="📋 List" url="/list" />
+			<Meta title="📋 List" url="/list/" />
 
 			<div className="pannel">
 				<button className="icon-button add" onClick={() => setItemViewerState({ flag: true, isAdd: true, item: defaultItemViewerState })}>

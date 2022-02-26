@@ -41,6 +41,8 @@ export default function CalendarChart({ list }: Props): ReactElement
 			/>
 		</div>
 	) : (
-		<ChartError />
+		<div className="chart-error">
+			<ChartError />
+		</div>
 	);
 }

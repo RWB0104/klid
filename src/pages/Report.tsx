@@ -25,7 +25,7 @@ export default function Report(): ReactElement
 
 	return (
 		<Section url="report" width="100%">
-			<Meta title="📝 Report" url="/report" />
+			<Meta title="📝 Report" url="/report/" />
 
 			{!reportState.flag ? <Dropper /> : <ReportList list={reportState.list} />}
 		</Section>

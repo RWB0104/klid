@@ -39,10 +39,12 @@ export default function Meta({ title, description = '도로명주소 업무 시�
 			<meta property="og:locale" content="ko_KR" />
 			<meta property="og:image" content="https://user-images.githubusercontent.com/50317129/155682455-98d30d63-d608-4190-a6f1-2d89868c62ba.png" />
 
+			<link rel="canonical" href={`${URL}${url}`} />
+
 			<title>{fullTitle}</title>
 
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YPNLPR0CQ"></script>
-			<script src={'/klid/js/ga.js'}></script>
+			<script src="https://project.itcode.dev/js/ga.js"></script>
 		</Helmet>
 	);
 }

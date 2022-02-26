@@ -33,7 +33,7 @@ export default function Statistics(): ReactElement
 
 	return (
 		<Section url="statistics" width={1200}>
-			<Meta title="📊 Statistics" url="/statistics" />
+			<Meta title="📊 Statistics" url="/statistics/" />
 
 			<div className="pannel">
 				<input type="week" name="week" aria-label="week" onChange={(e) =>

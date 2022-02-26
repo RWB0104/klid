@@ -17,7 +17,7 @@ import Icon from '@mdi/react';
 export default function ChartError(): ReactElement
 {
 	return (
-		<div className="chart-error">
+		<div>
 			<Icon path={mdiAlertOctagonOutline} color="#FF9999" size={7} />
 			<h4>차트 렌더링 실패</h4>
 		</div>
